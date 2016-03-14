@@ -49,6 +49,24 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,replacementString string: String) -> Bool {
+        let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
+        let replacementTextHasDecimalSeparator = string.rangeOfString(".")
+        
+        if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
+            return false
+        }
+        
+        
+        let trimmedString = string.stringByTrimmingCharactersInSet(eligibleCharacters)
+        if (!trimmedString.isEmpty) {
+            return false
+        }
+        
+        return true
+    }
+    
+    
     let numberFormatter: NSNumberFormatter = {
        let nf = NSNumberFormatter()
         nf.numberStyle = .DecimalStyle
@@ -57,17 +75,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         return nf
     }()
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,replacementString string: String) -> Bool {
-        let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
-        let replacementTextHasDecimalSeparator = string.rangeOfString(".")
-        
-        if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
-            return false
-        }
-        else {
-            return true
-        }
     
-        return true
-    }
+    let eligibleCharacters: NSMutableCharacterSet = {
+        let set = NSMutableCharacterSet.decimalDigitCharacterSet()
+        set.addCharactersInString(".")
+        return set
+    }()
+    
+
 }
