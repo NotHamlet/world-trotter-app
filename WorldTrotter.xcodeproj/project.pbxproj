@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC2D6C811C98930D0051DE4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2D6C831C98930D0051DE4D /* Localizable.strings */; };
 		DC2F744B1C9729A600ECDB74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F744A1C9729A600ECDB74 /* AppDelegate.swift */; };
 		DC2F74501C9729A600ECDB74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2F744E1C9729A600ECDB74 /* Main.storyboard */; };
 		DC2F74521C9729A700ECDB74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC2F74511C9729A600ECDB74 /* Assets.xcassets */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC2D6C821C98930D0051DE4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC2D6C841C98930F0051DE4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC2D6C851C9893100051DE4D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DC2F74471C9729A600ECDB74 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2F744A1C9729A600ECDB74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC2F744F1C9729A600ECDB74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		DC2F745E1C973F4D00ECDB74 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../ConversionViewController.swift; sourceTree = "<group>"; };
 		DC2F74601C9760FB00ECDB74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DC2F74621C9764F000ECDB74 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DC63CA721C988EE1003A1FFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		DC63CA731C988F4E003A1FFA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 		DC2F74491C9729A600ECDB74 /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
+				DC2D6C831C98930D0051DE4D /* Localizable.strings */,
 				DC2F744A1C9729A600ECDB74 /* AppDelegate.swift */,
 				DC2F744E1C9729A600ECDB74 /* Main.storyboard */,
 				DC2F745E1C973F4D00ECDB74 /* ConversionViewController.swift */,
@@ -113,6 +120,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = DC2F743E1C9729A600ECDB74;
 			productRefGroup = DC2F74481C9729A600ECDB74 /* Products */;
@@ -130,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC2F74551C9729A700ECDB74 /* LaunchScreen.storyboard in Resources */,
+				DC2D6C811C98930D0051DE4D /* Localizable.strings in Resources */,
 				DC2F74521C9729A700ECDB74 /* Assets.xcassets in Resources */,
 				DC2F74501C9729A600ECDB74 /* Main.storyboard in Resources */,
 			);
@@ -151,10 +160,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DC2D6C831C98930D0051DE4D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC2D6C821C98930D0051DE4D /* Base */,
+				DC2D6C841C98930F0051DE4D /* en */,
+				DC2D6C851C9893100051DE4D /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DC2F744E1C9729A600ECDB74 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DC2F744F1C9729A600ECDB74 /* Base */,
+				DC63CA721C988EE1003A1FFA /* en */,
+				DC63CA731C988F4E003A1FFA /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -292,6 +313,7 @@
 				DC2F745B1C9729A700ECDB74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

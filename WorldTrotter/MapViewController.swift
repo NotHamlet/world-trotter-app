@@ -20,7 +20,10 @@ class MapViewController: UIViewController {
         // Set it as *the* view of this view controller
         view = mapView
         
-        let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+        let standardString = NSLocalizedString("Standard", comment: "Standard Map View")
+        let satelliteString = NSLocalizedString("Satellite", comment: "Satellite Map View")
+        let hybridString = NSLocalizedString("Hybrid", comment: "Hybrid Map View")
+        let segmentedControl = UISegmentedControl(items: [standardString, satelliteString, hybridString])
         segmentedControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         
@@ -30,7 +33,6 @@ class MapViewController: UIViewController {
         view.addSubview(segmentedControl)
         
         let topConstraint = segmentedControl.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 8)
-        
         let margins = view.layoutMarginsGuide
         let leadingConstraint = segmentedControl.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor)
         let trailingConstraint = segmentedControl.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor)

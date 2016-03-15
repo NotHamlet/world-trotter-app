@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Map-->
@@ -27,25 +28,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWR-yQ-Woq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWR-yQ-Woq">
                                 <rect key="frame" x="147" y="120" width="305.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKC-gd-Auh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKC-gd-Auh">
                                 <rect key="frame" x="241" y="171" width="118.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jf-FF-2ed">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jf-FF-2ed">
                                 <rect key="frame" x="241" y="222" width="116.5" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2J-4s-NjR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2J-4s-NjR">
                                 <rect key="frame" x="172" y="314" width="254" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
@@ -69,15 +70,23 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uWR-yQ-Woq" firstAttribute="top" secondItem="dmS-pv-hDs" secondAttribute="bottom" constant="8" id="00L-jd-WHy"/>
+                            <constraint firstItem="uWR-yQ-Woq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5u2-GF-RRf"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="X2J-4s-NjR" secondAttribute="trailing" id="7iI-Sm-D49"/>
+                            <constraint firstItem="X2J-4s-NjR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="90a-Aw-haa"/>
                             <constraint firstItem="X2J-4s-NjR" firstAttribute="centerX" secondItem="uWR-yQ-Woq" secondAttribute="centerX" id="DG7-Cc-Ir8"/>
+                            <constraint firstItem="mKC-gd-Auh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J9M-Wc-Lyh"/>
                             <constraint firstItem="mKC-gd-Auh" firstAttribute="top" secondItem="uWR-yQ-Woq" secondAttribute="bottom" constant="8" id="KcS-CL-uQa"/>
                             <constraint firstItem="dmS-pv-hDs" firstAttribute="centerX" secondItem="uWR-yQ-Woq" secondAttribute="centerX" id="OUb-4J-WmL"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="9Jf-FF-2ed" secondAttribute="trailing" id="QM2-ip-ZSR"/>
+                            <constraint firstItem="9Jf-FF-2ed" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V6H-BY-JWW"/>
                             <constraint firstItem="X2J-4s-NjR" firstAttribute="top" secondItem="9Jf-FF-2ed" secondAttribute="bottom" constant="8" id="a5y-l7-Kxl"/>
                             <constraint firstItem="dmS-pv-hDs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cuc-9j-fV3"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="uWR-yQ-Woq" secondAttribute="trailing" id="d2N-4t-4Kq"/>
                             <constraint firstItem="mKC-gd-Auh" firstAttribute="centerX" secondItem="uWR-yQ-Woq" secondAttribute="centerX" id="day-2f-FYz"/>
                             <constraint firstItem="9Jf-FF-2ed" firstAttribute="top" secondItem="mKC-gd-Auh" secondAttribute="bottom" constant="8" id="ejK-Tj-YYE"/>
                             <constraint firstItem="9Jf-FF-2ed" firstAttribute="centerX" secondItem="uWR-yQ-Woq" secondAttribute="centerX" id="jiL-Dk-5cu"/>
                             <constraint firstItem="dmS-pv-hDs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jwP-AM-2go"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="mKC-gd-Auh" secondAttribute="trailing" id="vL7-Z3-vdu"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="0wB-fr-79E" appends="YES" id="bBF-hX-JS7"/>
